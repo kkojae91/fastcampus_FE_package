@@ -1,0 +1,40 @@
+<!-- html 버전을 지정하는 것 (표준 html5) -->
+<!DOCTYPE html>
+<!-- 문서의 전체 범위를 의미하는 html tag 
+    html 문서가 어디에서 시작해서 어디에서 끝나는지 알려주는 역할
+    lang을 ko로 바꿔주면 한국어로 설정된다. (default en)-->
+<html lang="en">
+<!-- 문서의 정보를 나타내는 범위
+    웹 페이지의 제목, 설명, 사용할 파일 위치, 스타일(css) 같은, 웹페이지의 보이지 않는 정보를 작성하는 범위 -->
+<head>
+  <!-- charset은 문자 인코딩 방식 = utf-8로 한다. --> 
+  <meta charset="UTF-8">
+  <!-- meta tag는 html 문서의 제작자 내용 키워드 같은 여러 정보를 검색엔진이나 브라우저에게 제공. 
+      name은 정보의 종류, content 정보의 값-->
+  <meta name="author" content="kkojae" />
+  <!-- desk top의 의미가 아니라 반응형의 경우 사용할 수 있는 정보가 입력되어 있다. (device용) -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- title은 html문서의 제목을 의미한다. -->
+  <title>Kkojae~</title>
+  
+  <!-- css를 연결시키기 위해서는 Link tag안에 href="경로"를 입력해줘야한다. 
+      rel(가져올 문서와의 관계를 나타내는 것 relationship의 약어) 
+      rel의 속성값을 icon으로 하고 hreft='favicon.png'를 넣어주면 favicon을 설정할 수 있다.-->
+  <link rel="stylesheet" href="./css/doctype.css" />
+
+  <!-- js를 연결시키기 위해서는 script tag안에 src="경로"를 입력해줘야한다. (src는 source의 약어)-->
+  <script src="./js/doctype.js"></script>
+</head>
+<!-- 문서의 구조를 나타내는 범위
+    로고, 헤더, 푸터, 내비게이션, 메뉴, 버튼, 이미지 같은, 웹페이지의 보여지는 구조를 작성하는 범위 -->
+<body>
+  <a href="https://naver.com">NAVER</a>
+  <a href="/about/">About</a>
+  <a href="/login/">Login</a>
+  <div></div> 
+  <!-- alt alternate의 약어로 이미지가 출력되지 않을 경우 대신 출력할 텍스트라 하며 대체 텍스트라 부른다. (필수적으로 기입해야 한다.) -->
+  <img src="./images/logo.png" alt="heropy-logo" />
+  <img src="https://heropy.blog/css/images/logo.png" alt="heropy-logo" />
+</body>
+</html>

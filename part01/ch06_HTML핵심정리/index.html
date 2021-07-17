@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css" />
+    <script src="./main.js" defer></script>
+  </head>
+  <body>
+    <!-- div(블록요소) 특별한 의미가 없는 구분을 위한 요소 (division의 약어) -->
+    <div>
+      <!-- h1(블록요소) 제목을 의하는 요소 (heading의 약어) 1~6번까지 존재 숫자가 작을수록 더 중요한 제목을 의미 -->
+      <h1>오늘의 날씨</h1>
+      <!-- p(블록요소) 문장을 의마하는 요소 (paragraph의 약어) -->
+      <p>중부 집중호우, 남부는 열대야, 12호 태풍 북상 중..</p>
+      <!-- img(인라인요소) 이미지를 삽입하는 요소 (image의 약어) 
+        src(source의 약어) 이미지의 경로를 설정해줘야한다. alt(alternate Text의 약어) 이미지가 출력되지 않을때 대체 택스트 작성 
+        src와 alt는 필수 속성이고, 이를 지키지 않을 경우 웹표준에 어긋나는 개념-->
+      <img src="" alt="12호 태풍" />
+    </div>
+    <!-- ul(블록요소) 순서가 필요없는 목록의 집합을 의미 (unordered list의 약어) -->
+    <!-- ol(블록요소) 순서가 필요한 목록의 집합을 의미 (ordered list의 약어) -->
+    <ul>
+      <!-- li(블록요소) 목록 내 각 항목. li는 항상 ul 또는 ol 의 자식요소로 존재해야한다. (list item)
+        (전역 속성) class 요소를 지칭하는 중복 가능한 이름 -->
+      <li class="fruits__item">사과</li>
+      <li class="fruits__item">딸기</li>
+      <li class="fruits__item">수박</li>
+      <li class="fruits__item">오렌지</li>
+    </ul>
+    <!-- a(인라인요소) 다른/같은 페이지로 이동하는 하이퍼링크를 지정하는 요소 (anchor의 약어) 
+      href(hyper text reference) 속성 값으로 경로를 명시 
+      target = '_blank'를 명시하면 새탭에 페이지를 열게 해준다.
+      (전역 속성)title='구글 홈페이지로 이동' 마우스를 hover하면 나오는 요소의 정보나 설명을 지정할 수 있다. -->
+    <a href="https://www.google.com" target="_blank" title="구글 홈페이지로 이동">Google</a>
+    <!-- (전역 속성) id 요소를 지칭하는 고유한 이름 -->
+    <p id="discription">
+      <!-- span(인라인요소) 특별한 의미가 없는 구분을 위한 요소
+        예를 들어 동해물에 글자 색을 바꾸고 싶거나 크기 등등 특정요소에만 css등 작업이 필요할 경우 사용 -->
+      <!-- br(인라인요소) 줄바꿈 요소. (break의 약어) -->
+      <span>동해물</span>과 백두산이<br />
+      마르고 닳도록
+    </p>
+    <!-- input(인라인요소, 블록요소) = inline-block 사용자가 데이터를 입력하는 요소. 
+        inline-block 요소들은 왼쪽에서 오른쪽으로 쌓여가고, width, height, margin, padding 값을 자유롭게 사용할 수 있는 특징이 있다.
+        type=입력받을 데이터의 타입을 명시, value=미리 입력된 값(데이터), placeholder=사용자가 입력할 값(데이터)의 힌트
+        disabled 입력 요소 비활성화 속성 속성값은 없다. -->
+    <input type="text" value="Kkojae" />
+    <!-- label(인라인요소) 라벨 가능 요소(input)의 제목 input의 type이 checkbox일 경우 사용
+      checked 속성을 주면 체크박스 입력 요소에 체크가 되어 표기 된다. -->
+    <label for=""> <input type="checkbox" /> Apple </label>
+    <label for=""> <input type="checkbox" checked /> Banana </label>
+    <!-- input type radio
+      checkbox와는 다르게 여러개중 1개만 선택할 경우 사용한다.
+      name 속성에 값으로 fruits로 같은 묶음을 표시 해줄 수 있다.-->
+    <label for=""><input type="radio" name="fruits" /> Apple </label>
+    <label for=""><input type="radio" name="fruits" /> Banana </label>
+
+    <!-- table(테이블요소) 표 요소, 행(row), 열(column)의 집합 -->
+    <table>
+      <!-- tr(테이블요소) 행(row)을 지정하는 요소. (table row의 약어) -->
+      <tr>
+        <!-- td(테이블요소) 열(column)을 지정하는 요소. (table data의 약어) -->
+        <td>A</td>
+        <td>B</td>
+      </tr>
+      <tr>
+        <td>C</td>
+        <td>D</td>
+      </tr>
+    </table>
+    <!-- data-요소명직접지정 : 요소에 데이터를 지정할 경우 사용 (보통 Javascript에서 요소의 값을 저장해놓을 경우) -->
+    <div class="fruits" data-fruit-name="apple">사과</div>
+    <div class="fruits" data-fruit-name="banana">바나나</div>
+  </body>
+</html>

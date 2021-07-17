@@ -1,0 +1,21 @@
+body {
+  /* font-size: 100px; */
+}
+
+span {
+  width: 100px;
+  height: 500px;
+  /* margin: 20px 20px; */
+  /* padding: 20px 20px; */
+  /* background-color: #666666; */
+}
+
+.block {
+  font-size: 20px;
+  font-weight: bold;
+  background-color: #999999;
+  margin: 100px 100px;
+  padding: 20px 20px;
+  width: 100px;
+  height: 40px;
+}

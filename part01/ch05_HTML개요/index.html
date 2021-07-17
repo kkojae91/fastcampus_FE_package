@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css" />
+    <link rel="stylesheet" href="./main.css" />
+  </head>
+  <body>
+    <!-- 부모 자식 관계는 나를 기준으로(해당하는 tag를 기준으로) 정의 된다. -->
+    <!-- 조상 div tag(grand parent element) -->
+    <div>
+      <!-- 부모 div tag(parent element) -->
+      <div>
+        <!-- 자식 div tag(child element) -->
+        <div>나</div>
+      </div>
+    </div>
+    <!-- empty tag 닫히는 tag가 없는 경우 head tag안에 있는 닫히지 않는 모든 tag를 의미한다. <tag /> 뒤에 /(슬래쉬)를 붙여 준다.
+        열리는 tag에는 속성과 값을 정의할 수 있다.(기능 확장)-->
+    <img src="" alt="" />
+    <!-- 
+      글자와 상자
+      요소가 화면에 출력되는 특성, 크게 2가지로 구분.
+      일반적으로 인라인 요소가 제약사항이 많고, 블록요소는 제약사항이 없다.
+
+      인라인(inline element)요소 : 글자를 만들기 위한 요소들
+        특징 0. 요소가 글자처럼 왼쪽에서 오른쪽으로 쌓인다.
+        특징 1. 본인이 가지고 있는 콘텐츠 크기 만큼 가로와 세로가 줄어든다.
+        특징 2. width, height 속성값이 먹지 않는다. (글자에 높이와 넓이는 존재하지 않으니..)
+        특징 3. margin, padding (top, bottom) 요소 외부 내부 여백을 지정하는 속성값이 먹지 않는다.
+        특징 4. inline요소 안에는 block요소를 사용할 수 없다. (<span><div></div></span>) -> 사용 불가
+        
+      블록(block element)요소 : 상자(레이아웃)를 만들기 위한 요소들 
+        특징 1. 요소가 수직으로 쌓인다. 
+        특징 2. width가 부모 요소의 크기만큼 자동으로 최대한 늘어남, height는 본인의 콘텐츠 크기만큼 자동으로 줄어듬
+        특징 3. 요소의 가로, 세로 너비를 지정해줄 수 있다.
+        특징 4. margin, padding 요소 모두 지정해줄 수 있다.
+        특징 5. block요소는 자식으로 block요소를 사용할 수 있고, inline요소 역시 사용가능하다. 
+      -->
+
+    <!-- 
+      span은 inline element 두줄로 작성을 했어도 수평으로(왼쪽에서 오른쪽으로) 출력된다.
+      각각의 요소들은 띄어쓰기로 구분 
+      tag를 한줄로 작성하면 띄어쓰기도 사라진다.-->
+    <span>Hello</span>
+    <span>World</span>
+    <div class="block">HI~!</div>
+    <div class="block">Kkojae!!</div>
+  </body>
+</html>

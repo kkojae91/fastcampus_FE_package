@@ -1,0 +1,7 @@
+/* css @import 방식 css문서 안에 다른 css파일을 import 할 경우 사용한다. (많이 사용하지 않는다.) */
+@import url("./box.css");
+
+div {
+  color: red;
+  margin: 20px;
+}

@@ -1,0 +1,14 @@
+/* 
+div tag를 직접 선택 (태그 선택자) -> 보통 잘 사용하지 않는다.
+선택자 {속성: 값;} 의 형태로 작성한다.
+선택자 {
+  속성: 값;
+  속성: 값;
+}
+위의 형태를 사용한다.
+*/
+div {
+  font-size: 50px;
+  color: blue;
+  text-decoration: underline;
+}

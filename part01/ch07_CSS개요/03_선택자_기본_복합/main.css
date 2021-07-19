@@ -1,0 +1,44 @@
+/* 기본 - 전체 선택자  "*" : 모든 요소를 선택 */
+* {
+  color: red;
+}
+
+/* 기본 - 태그 선택자 li : tag의 모든 요소를 선택 */
+li {
+  color: blue;
+}
+
+/* 기본 - 클래스 선택자 .orange : 같은 class속성값을 가지고 있는 요소를 선택 */
+.orange {
+  color: orange;
+}
+
+/* 기본 - 아이디 선택자 #orange : id 속성의 값인 요소를 선택 */
+#orange {
+  color: purple;
+}
+
+/* 복합 - 일치 선택자 span.orange : span태그중에 class 속성값이 orange인 요소를 선택 */
+span.orange {
+  color: aqua;
+}
+
+/* 복합 - 자식 선택자 ul > .apple : ul태그의 자식요소 중에 class 속성값이 apple인 요소를 선택 */
+ul > .apple {
+  color: bisque;
+}
+
+/* 복합 - 하위(후손) 선택자 div .tomato : div태그 하위 요소 중에 class 속성값이 tomato인 요소를 선택 */
+div .tomato {
+  color: tomato;
+}
+
+/* 복합 - 인접 형제 선택자 .mellon + li : class 속성값이 mellon인 요소의 다음 형제 요소가 li인 요소 하나를 선택 */
+.mellon + li {
+  color: greenyellow;
+}
+
+/* 복합 - 일반 형제 선택자 .mellon ~ li : class 속성값이 mellon인 요소의 다음 형제 요소가 li인 요소 모두를 선택 */
+.mellon ~ li {
+  color: green;
+}

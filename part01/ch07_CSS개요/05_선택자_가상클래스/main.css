@@ -1,0 +1,59 @@
+.box {
+  width: 100px;
+  height: 100px;
+  background-color: orange;
+  /* transition을 활용해서 변화하는 속도를 제어 */
+  transition: 350ms;
+}
+
+/* 가상 클래스 선택자 hover
+마우스가 선택자 위에 올라가게 된다면! 아래와 같이 바뀌어라 */
+.box:hover {
+  width: 300px;
+  background-color: royalblue;
+}
+
+/* 가상 클래스 선택자 active
+마우스가 선택자를 클릭하고 있는 동안 아래와 같이 바뀌어라 */
+.box:active {
+  transform: translateY(2px);
+}
+
+input {
+  transition: 350ms;
+}
+
+/* 가상 클래스 선택자 focus
+요소가 포커스되면 아래와 같이 바뀌어라. 
+focus가 적용되는 요소들은 html 대화형 콘텐츠가 해당된다.
+input, a, button, label, select등 요소가 있다. 대화형 콘텐츠 요소가 아닌 tabindex 속성을 사용한 요소도 focus가 될 수 있다. */
+input:focus {
+  background-color: orange;
+}
+
+/* 가상 클래스 선택자 first-child
+.fruits 하위 요소중 span tag의 형재 요소들 중에 first-child 첫번째 요소를 아래와 같이 바꿔라 */
+.fruits span:first-child {
+  color: red;
+}
+
+/* 가상 클래스 선택자 last-child
+.fruits 하위 요소중 h3태그이면서 last-child 마지막 요소를 아래와 같이 바꿔라 */
+.fruits h3:last-child {
+  color: red;
+}
+
+/* 가상 클래스 선택자 nth-child() 
+.fruits 하위 요소 전체 형제 요소중 (n)번째 라면 선택 
+(2n) 으로 작성 할 수 있다. -> 짝수인 요소들 모두 선택 
+(2n + 1) -> 홀수인 요소들 모두 선택
+(n + 2) -> 첫 번재 요소를 제외한 모든 요소 선택 */
+.fruits *:nth-child(2) {
+  color: red;
+}
+
+/* 가상 클래스 선택자 부정 선택자 not(span)
+.fruits 하위 요소 전체 중 span이 아닌 요소를 모두 선택 */
+.fruits *:not(span) {
+  color: blue;
+}

@@ -1,0 +1,34 @@
+/* 스타일 상속 : 상위 요소의 속성값이 하위 요소에도 적용되는 현상
+모든 속성값이 하위 요소에 상속되는 것은 아니다.
+모든 글자/ 문자 관련 속성들!! 이 상속된다.
+font-style: 글자 기울기
+font-weight: 글자 두께
+font-size: 글자 크기
+line-height: 줄 높이
+font-family: 폰트(서체)
+color: 글자 색상
+text-align: 정렬
+...
+
+animal class 하위 요소들 모두 color: red;로 속성값이 설정 된다. */
+.animal {
+  color: red;
+}
+
+/* 강제 상속 : 상속되지 않는 속성을 상속시키는 것 */
+
+.parent {
+  width: 300px;
+  height: 400px;
+  background-color: orange;
+}
+
+.child {
+  width: 100px;
+  /* inherit을 속성값으로 사용해주면 부모요소의 값을 그대로 상속 받는다. */
+  height: inherit;
+  background-color: inherit;
+  position: fixed;
+  top: 100px;
+  right: 500px;
+}

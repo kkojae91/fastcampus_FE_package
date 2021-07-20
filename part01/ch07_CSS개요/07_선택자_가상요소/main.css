@@ -1,0 +1,34 @@
+/* 가상 요소 선택자 ::before
+.box::before class 속성 값이 box인 요소의 내부 앞에 content의 속성값을 삽입
+인라인(글자) 요소가 삽입된다. */
+/* content는 값이 없더라도 항상 비워서("")라도 꼭 명시해줘야 한다. */
+.box::before {
+  content: "앞!";
+}
+
+/* 가상 요소 선택자 ::after
+.box::after class 속성 값이 box인 요소의 내부 뒤에 content의 속성값을 삽입
+인라인(글자) 요소가 삽입된다. */
+/* content는 값이 없더라도 항상 비워서("")라도 꼭 명시해줘야 한다. */
+.box::after {
+  content: "뒤!!";
+}
+
+.box2 {
+  width: 100px;
+  height: 100px;
+  background-color: orange;
+}
+
+/* .box2::before {
+  content: "--";
+} */
+
+.box2::after {
+  content: "";
+  /* display: block을 설정하면 인라인 요소 -> 블록 요소로 변경된다. */
+  display: block;
+  width: 30px;
+  height: 30px;
+  background-color: royalblue;
+}

@@ -1,0 +1,17 @@
+/* 속성 선택자 ATTR
+[disabled] 속성값을 가지고 있는 요소를 선택*/
+
+[disabled] {
+  color: red;
+}
+
+/* 속성 선택자 ATTR = VALUE
+[type="password"] type의 속성과 속성값으로 password인 요소를 선택 */
+[type="password"] {
+  color: blue;
+  background-color: yellow;
+}
+
+[data-fruit-name] {
+  background-color: orange;
+}

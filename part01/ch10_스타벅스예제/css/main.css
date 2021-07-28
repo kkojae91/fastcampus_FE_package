@@ -10,6 +10,7 @@ body {
   /* 행간 설정 line-height */
   line-height: 1.4;
   font-family: "Nanum Gothic", sans-serif;
+  height: 3000px;
 }
 
 img {
@@ -30,6 +31,10 @@ a {
 header {
   background-color: #f6f5f0;
   border-bottom: 1px solid #c8c8c8;
+  /* position fixed, absolute -> block 요소는 가로 너비를 최소한으로 사용하려 한다. (default 최대한으로 사용한다.) */
+  position: fixed;
+  top: 0;
+  width: 100%;
 }
 
 /* header에 자식요소인 inner의 높이를 120px로 설정 */
@@ -209,4 +214,19 @@ header .main-menu .item .item__contents .contents__texture h4 {
 header .main-menu .item .item__contents .contents__texture p {
   color: #669900;
   margin: 4px 0 14px;
+}
+
+header .badges {
+  position: absolute;
+  top: 132px;
+  right: 12px;
+}
+
+header .badges .badge {
+  border-radius: 10px;
+  /* border-radius로 요소를 깍는데 이미지는 모서리가 깍이지 않으니 overflow: hidden으로 요소 밖으로 튀어나오는 부분들을 숨겨준다. */
+  overflow: hidden;
+  margin-bottom: 12px;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
 }

@@ -64,3 +64,30 @@ new Swiper(".notice-line .swiper-container", {
   // 반복재생
   loop: true,
 });
+
+new Swiper(".promotion .swiper-container", {
+  // direction: "horizontal", default
+  // 한번에 보여줄 slide 개수 지정 default = 1
+  slidesPerView: 3,
+  // slide 사이의 여백을 10px로 지정
+  spaceBetween: 10,
+  // 첫번째 슬라이드를 센터에서 시작하겠다고 지정
+  centeredSlides: true,
+  // 반복 재생
+  loop: true,
+  // 자동 재생
+  autoplay: {
+    // optional default 3000ms "ms"는 생략
+    delay: 5000,
+  },
+  pagination: {
+    // element selector pagination
+    el: ".promotion .swiper-pagination",
+    // 사용자의 페이지 번호 요소 제어 여부
+    clickable: true,
+  },
+  navigation: {
+    prevEl: ".promotion .swiper-prev",
+    nextEl: ".promotion .swiper-next",
+  },
+});

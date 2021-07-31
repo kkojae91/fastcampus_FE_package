@@ -452,6 +452,13 @@ header .badges .badge {
   height: 693px;
   background-color: #f6f5ef;
   position: relative;
+  transition: height 0.4s;
+  overflow: hidden;
+}
+
+/* 일치 선택자 promotion과 hide class속성값을 두개를 모두 가지고 있는 친구를 선택 */
+.notice .promotion.hide {
+  height: 0;
 }
 
 .notice .promotion .swiper-container {

@@ -731,10 +731,10 @@ header .badges .badge {
 
 /* PICK YOUR FAVORITE */
 .pick-your-favorite {
+  /* 배경 고정! 패럴랙스 효과 */
   background-image: url("../images/favorite_bg.jpg");
   background-repeat: no-repeat;
   background-position: center;
-  /* 배경 고정! 패럴랙스 효과 */
   background-attachment: fixed;
   background-size: cover;
 }
@@ -757,4 +757,63 @@ header .badges .badge {
 
 .pick-your-favorite .text-group .description {
   margin-bottom: 40px;
+}
+
+/* RESERVE STORE */
+.reserve-store {
+  background-image: url("../images/reserve_store_bg.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.reserve-store .inner {
+  height: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.reserve-store .medal {
+  width: 334px;
+  height: 334px;
+  /* 원근 거리 추가 */
+  perspective: 600px;
+}
+
+.reserve-store .medal .front,
+.reserve-store .medal .back {
+  width: 334px;
+  height: 334px;
+  position: absolute;
+  /* 뒷 면은 안보이게! */
+  backface-visibility: hidden;
+  transition: 1s;
+}
+
+/* 3D 효과 추가!! */
+.reserve-store .medal .front {
+  transform: rotateY(0deg);
+}
+
+.reserve-store .medal:hover .front {
+  transform: rotateY(180deg);
+}
+
+.reserve-store .medal .back {
+  transform: rotateY(-180deg);
+}
+
+.reserve-store .medal:hover .back {
+  transform: rotateY(0deg);
+}
+
+.reserve-store .medal .back .btn {
+  /* 가로너비(width)는 COMMON에 정의 되어 있다. */
+  position: absolute;
+  top: 240px;
+  left: 0;
+  right: 0;
+  margin: auto;
 }

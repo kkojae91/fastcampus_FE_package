@@ -607,3 +607,49 @@ header .badges .badge {
     공간이 남을 경우 쭉 늘어나라 1을 주면 모든 남는 공간을 1을 받은 친구 혼자서 다 받을 수 있다. */
   flex-grow: 1;
 }
+
+/* YOUTUBE VIDEO */
+.youtube {
+  position: relative;
+  height: 700px;
+  background-color: #333;
+  overflow: hidden;
+}
+
+.youtube .youtube__area {
+  width: 1920px;
+  background-color: orange;
+  position: absolute;
+  /* 16:9 비율을 맞추기 위해 가운데 정렬.. */
+  top: 50%;
+  margin-top: calc(1920px * 9 / 16 / -2);
+  left: 50%;
+  margin-left: calc(1920px / -2);
+}
+
+/* 16:9 비율을 만들 기 위해 가상 요소를 활용 padding-top: 56:25%를 사용! */
+.youtube .youtube__area::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 0;
+  padding-top: 56.25%;
+}
+
+.youtube .youtube__cover {
+  background-image: url("../images/video_cover_pattern.png");
+  background-color: rgba(0, 0, 0, 0.3);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+#player {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}

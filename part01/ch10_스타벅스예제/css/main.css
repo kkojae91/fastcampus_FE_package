@@ -651,7 +651,6 @@ header .badges .badge {
 
 .youtube .youtube__area {
   width: 1920px;
-  background-color: orange;
   position: absolute;
   /* 16:9 비율을 맞추기 위해 가운데 정렬.. */
   top: 50%;
@@ -700,7 +699,7 @@ header .badges .badge {
 .youtube .floating2 {
   position: absolute;
   top: 350px;
-  left: 150;
+  left: 150px;
 }
 
 /* SEASON PRODUCT */
@@ -1041,7 +1040,7 @@ footer .logo {
   margin: 30px auto 0;
 }
 
-/*  */
+/* TOTOP */
 #to-top {
   width: 42px;
   height: 42px;

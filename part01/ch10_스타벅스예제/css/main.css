@@ -1040,3 +1040,21 @@ footer .logo {
     COMMON 부분에 img를 display block으로 지정 했다.*/
   margin: 30px auto 0;
 }
+
+/*  */
+#to-top {
+  width: 42px;
+  height: 42px;
+  background-color: #333;
+  color: #fff;
+  border: 2px solid #333;
+  border-radius: 10px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 9;
+}

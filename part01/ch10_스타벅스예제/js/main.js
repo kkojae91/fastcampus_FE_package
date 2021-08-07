@@ -21,11 +21,12 @@ searchInputEl.addEventListener("blur", () => {
 });
 
 const badgeEl = document.querySelector("header .badges");
-
+const toTopEl = document.querySelector("#to-top");
 // _.throttle(cb, 000ms) -> lodash module안에 있는 기능 제공. cb함수를 300ms에 한번씩 호출한다.
 // scorll 의 경우 많이 cb를 호출하게 되므로 프로그램이 버벅거릴 수 있다. (프로그램이 무거졌을 경우)
 window.addEventListener(
   "scroll",
+  // _throttle(함수, 시간)
   _.throttle(() => {
     // console.log(window.scrollY);
     if (window.scrollY > 500) {
@@ -35,15 +36,29 @@ window.addEventListener(
         opacity: 0,
         display: "none",
       });
+      // visible button
+      gsap.to(toTopEl, 0.2, {
+        x: 0,
+      });
     } else {
       // visible badge
       gsap.to(badgeEl, 0.6, {
         opacity: 1,
         display: "block",
       });
+      // hidden button
+      gsap.to(toTopEl, 0.2, {
+        x: 100,
+      });
     }
   }, 300)
 );
+
+toTopEl.addEventListener("click", () => {
+  gsap.to(window, 0.7, {
+    scrollTo: 0,
+  });
+});
 
 const fadeEls = document.querySelectorAll(".visual .fade-in");
 fadeEls.forEach((fadeEl, index) => {

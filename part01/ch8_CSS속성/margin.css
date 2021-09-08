@@ -1,0 +1,35 @@
+/* 
+* margin (마진) 요소의 외부 여백(공간)을 지정하는 단축 속성
+특징 : 음수를 사용할 수 있다!
+0(기본값) : 외부 여백 없음
+auto : 브라우저가 외부 여백을 계산 (가로, 세로 너비가 있는 요소의 가운데 정렬에 활용!)
+단위 : px, em, vw등 단위로 지정
+%(잘 사용 X) : 부모 요소의 가로 너비에 대한 비율로 지정
+*/
+
+.container {
+}
+
+.container .item {
+  width: 100px;
+  height: 100px;
+  background-color: orange;
+  /* margin:(4개를 지정할 경우) top right bottom left */
+  /* margin:(2개를 지정할 경우) top,bottom right,left */
+  /* margin:(3개를 지정할 경우) top right,left bottom 상중하*/
+  /* margin:(1개를 지정할 경우) top,right,bottom,left 모두 */
+  /* margin: 10px; */
+  margin-bottom: 20px;
+}
+
+/* 
+* Q. margin 속성의 역할은?
+요소의 외부 여백을 지정
+
+* Q. margin: 40px 30px 20px; 30px이 가르키는 방향은?
+left, right
+
+* Q. margin: 20px 10px; 20px이 가르키는 방향은?
+top, bottom
+
+*/

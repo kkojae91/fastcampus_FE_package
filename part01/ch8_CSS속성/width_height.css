@@ -1,0 +1,70 @@
+/* 
+* width height; (요소의 가로, 세로 너비)
+auto(기본값) : 브라우저가 요소의 너비를 계산 - 요소에 이미 들어가있는 속성의 값
+단위 : px, em, vw 등 단위로 지정
+
+인라인 요소의 경우 (ex. span)
+width, height가 포함한 콘텐츠의 크기에 맞춰 자동으로 줄어들게 끔 설계되어 있다.
+인라인 요소는 본질적으로 width, height값을 수정할 수 없다. -> display block을 설정! 해주면 width, height값을 설정해줄 수 있다.
+
+블록 요소의 경우 (ex. div)
+width는 부모 요소의 크기만큼 자동으로 늘어남
+height의 경우 포함한 콘텐츠의 크기에 맞춰 자동으로 줄어듬
+*/
+
+/* 
+* max-width, max-height; (요소가 가질 수 있는 최대 가로, 세로 너비)
+none(기본값) : 최대너비 제한 없음
+단위 : px, em, vw 등 단위로 지정
+
+* min-width, min-height; (요소가 가질 수 있는 최소 가로, 세로 너비)
+0(기본값) : 최소 너비 제한 없음
+단위 : px, em, vw 등 단위로 지정
+*/
+
+.div {
+  width: 100px;
+  height: 100px;
+  background-color: orange;
+  margin-bottom: 10px;
+}
+
+span {
+  display: block;
+  width: 100px;
+  height: 100px;
+  background-color: orange;
+  margin-bottom: 10px;
+}
+
+.parent {
+  width: 300px;
+  height: 200px;
+  background-color: royalblue;
+}
+
+.child {
+  /* width: 200px; */
+  /* max-width: 150px; */
+  min-width: 400px;
+  height: 100px;
+  background-color: orange;
+}
+
+/* 
+* Q. width, height 속성의 역할은?
+width : 요소의 가로 너비 정의
+height : 요소의 세로 너비 정의
+
+* Q. width, height 속성의 기본값은?
+width : auto,
+height : auto,
+
+* Q. max-width, max-height 속성의 기본값은?
+max-width : none,
+max-height : none
+
+*Q . min-width, min-height 속성의 기본값은?
+min-width : 0,
+min-height : 0
+*/

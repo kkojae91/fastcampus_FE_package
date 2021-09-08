@@ -1,0 +1,54 @@
+/* 
+* measure 단위
+px 픽셀
+% 상대적 백분율
+em 요소의 글꼴 크기
+rem 루트 요소(html)의 글꼴 크기
+vw 뷰포트 가로 너비의 백분율
+vh 뷰포트 세로 너비의 백분율
+*/
+
+html {
+  /* html의 기본 font-size는 16px 명시하지 않아도 기본값! */
+  /* font-size: 16px; */
+}
+
+.parent {
+  width: 300px;
+  height: 200px;
+  background-color: royalblue;
+}
+
+.child {
+  /* width: 100px; */
+  /* % 상대적인 사이즈 즉, 부모요소의 width 값을 100% 사용하겠다는 의미 */
+  /* width: 100%; */
+  /* 
+   * em은 잘 사용되지 않는다 관리가 어려워서 (상대적인 기준),
+   * rem은 html(root)의 font-size의 값이 1rem 예를 들어 html의 font-size가 16px -> width: 20rem일 경우 width 값은 16*20rem이 된다.
+   * rem은 html의 font-size를 변경하게 되면 모든 rem이 들어간 요소들을 비율로 변환하기 때문에 편린하게 관리가 된다. (반응형에 적용해도 좋을것 같다?!)
+  */
+  /* width: 20rem; */
+
+  /* view port 기준 width 값을 50%를 사용하겠다! (화면의 크기가 변경되면 변경되는 viewport 만큼의 50% 사용) */
+  width: 50vw;
+
+  /* height: 100px; */
+  /* % 상대적인 사이즈 즉, 부모요소의 height 값을 50% 사용하겠다는 의미 */
+  /* height: 50%; */
+
+  /* view port 기준 height 값을 50%를 사용하겠다! (화면의 크기가 변경되면 변경되는 viewport 만큼의 50% 사용) */
+  height: 50vh;
+
+  background-color: orange;
+}
+
+/* 
+* Q. em 단위의 기준은?
+요소의 글꼴 크기 (상대적)
+
+* Q. 0px, 0vw 중 더 큰 값은?
+모두 같은 0 -> 0일 경우 단위를 사용하지 않는다.
+
+
+*/

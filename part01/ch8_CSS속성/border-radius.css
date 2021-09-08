@@ -1,0 +1,21 @@
+/* 
+* border-radius 요소의 모서리를 둥글게 깎음
+0(기본값) : 둥글게 없음
+단위 : px, em, vw등 단위로 지정
+
+특정 부위만 둥글게 만들고 싶을 경우 아래와 같이 작성한다.
+border-radius: 좌상단 우상단 우하단 좌하단; 순서로 작성할 수 있다.
+*/
+
+div {
+  width: 100px;
+  height: 100px;
+  background-color: orange;
+  margin: 20px;
+  border-radius: 20px;
+}
+
+/* 
+* 요소의 모서리를 둥글게 깍기 위한 속성은?
+border-radius
+*/

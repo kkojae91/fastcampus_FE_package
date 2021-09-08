@@ -1,0 +1,37 @@
+/* 
+* padding 요소의 내부 여백(공간)을 지정하는 단축 속성;
+0(기본값) : 내부 여백 없음
+단위 : px, em, vw 등 단위로 지정
+% : 부모 요소의 가로 너비에 대한 비율로 지정
+padding값을 사용하면 요소의 크기가 커진다.
+*/
+
+/* padding:(4개를 지정할 경우) top right bottom left */
+/* padding:(2개를 지정할 경우) top,bottom right,left */
+/* padding:(3개를 지정할 경우) top right,left bottom 상중하*/
+/* padding:(1개를 지정할 경우) top,right,bottom,left 모두 */
+
+.container {
+}
+
+.container .item {
+  width: 100px;
+  height: 100px;
+  background-color: orange;
+  border: 4px solid red;
+}
+
+.container .item:first-child {
+  padding: 20px;
+}
+
+/* 
+* Q. padding 속성의 역할은?
+요소의 내부 여백을 지정
+
+* Q. padding: 20px 10px 40px 30px; 30px은 어느 방향을 가르키는가?
+left
+
+* Q. padding 속성의 특징은?
+추가된 만큼 요소의 크기가 늘어난다.
+*/

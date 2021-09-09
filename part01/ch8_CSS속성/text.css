@@ -1,0 +1,58 @@
+/* 
+* 글자의 색상
+color: white;
+rgb(0,0,0)(기본값): 검정색
+색상 : 기타 지정 가능한 색상
+
+* 문자의 정렬 방식
+text-align: center;
+left(기본값): 왼쪽 정렬
+right: 오른쪽 정렬
+center: 가운데 정렬
+아래는 잘 사용하지 않는다.
+justify: 양쪽 정렬
+
+* 문자의 장식(선)
+text-decoration: none;
+none(기본값) : 장식 없음 
+underline: 밑줄 (a tag는 underline이 기본값)
+line-through: 중앙선
+아래는 잘 사용하지 않는다.
+overline: 윗줄
+
+* 문자 첫 줄의 들여쓰기
+text-indent: ;
+0(기본값) : 들여쓰기 없음
+단위 : px, em, rem 등 단위로 지정
+음수를 사용할 수 있다 음수를 사용할 경우 (내어쓰기 - outdent)
+아래는 잘 사용하지 않는다.
+% 요소의 가로 너비에 대한 비율
+*/
+
+a {
+  display: block;
+  width: 200px;
+  height: 100px;
+  background-color: orange;
+  font-size: 22px;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  line-height: 100px;
+}
+
+p {
+  font-size: 24px;
+  text-indent: 50px;
+}
+
+/* 
+* Q. 문자를 수평 정렬하는 속성은?
+text-align
+
+* Q. 문자를 들여쓰는 속성은?
+text-indent
+
+* Q. text-decoration 속성의 기본값은?
+none, a tag는 underline
+*/

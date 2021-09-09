@@ -1,0 +1,70 @@
+/* 
+* 요소의 배경 색상
+background-color: ;
+transparent(기본값) : 투명함
+색상 : 지정 가능한 색상
+
+* 요소의 배경 이미지 삽입
+background-image: url("path");
+none(기본값) 이미지 없음
+url("경로") 이미지 경로
+
+* 요소의 배경 이미지 반복
+background-repeat: no-repeat;
+repeat(기본값): 이미지를 수직, 수평 반복
+repeat-x 이미지를 수평 반복
+repeat-y 이미지를 수직 반복
+no-repeat 반복 없음
+
+* 요소의 배경 이미지 위치
+background-position: center; (top right -> 우상단) (100px 30px -> x축에서부터 100px, y축에서부터 30px 떨어진 곳에 위치)
+방향 : top, bottom, left, right, center 방향
+단위 : px, em, rem 등 단위로 지정
+아래는 잘 사용하지 않는다.
+0% 0%(기본값) : 0% ~ 100% 사이의 값
+
+* 요소의 배경 이미지 크기
+background-size: 70px;
+한쪽 값만 입력하더라도 x, y 모두 적용된다. (70px 70px) 입력 가능
+auto(기본값) 이미지 실제 크기
+단위 : px, em, rem 등 단위로 지정
+width 200px; height: 100px; 일 경우
+cover: 비율을 유지, 요소의 더 넓은 너비에 맞춤 (200px 기준으로 맞춘다.)
+contain: 비율을 유지, 요소의 더 짧은 너비에 맞춤 (100px 기준으로 맞춘다.)
+
+* 요소의 배경 이미지 스크롤 특성
+background-attachment: fixed;
+scroll(기본값) 이미지가 요소를 따라서 같이 스크롤
+fixed 이미지가 뷰포트에 고정, 스크롤 하더라도 이미지 이동 x;
+아래는 잘 사용되지 않는다.
+local 요소 내 스크롤시 이미지가 같이 스크롤
+*/
+
+body {
+  height: 3000px;
+}
+
+div {
+  /* width: 200px; */
+  height: 200px;
+  background-color: orange;
+  background-image: url("https://heropy.blog/css/images/logo.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+/* 
+* Q. 요소 배경에 이미지를 삽입하는 속성은?
+background-image
+
+* Q. 요소 배경에 이미지를 삽입할 때 사용하는 함수는?
+url("경로")
+
+* Q. 배경이미지를 반복하지 않는 속성 값은?
+background-repeat: no-repeat;
+
+* Q. 요소가 스크롤 될 때 배경 이미지는 뷰포트에 고정되는 속성 값은? (패럴렉스에 사용)
+background-attachment: fixed;
+*/

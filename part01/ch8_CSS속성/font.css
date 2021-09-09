@@ -1,0 +1,72 @@
+/* 
+* 글자의 크기
+font-size : 16px 기본값
+16px(기본값) : 기본 크기
+단위 : px, em, rem 등 단위로 지정
+아래는 잘 사용되지 않는다.
+% : 부모 요소의 폰트 크기에 대한 비율
+smallar 상위(부모) 요소보다 작은 크기
+larger 상위(부모) 요소보다 큰 크기
+xx-small ~ xx-large 가장 작은 크기 ~ 가장 큰 크기까지, 7단계의 크기를 지정
+
+* 글꼴 두께(가중치)
+font-weight : 700
+normal || 400(기본값) : 기본두께
+bold || 700 : 두껍게
+100~900 : 100단위의 9개, normal과 bold 이외 두께 숫자로 지정가능
+아래는 잘 사용되지 않는다.
+bolder : 상위(부모) 요소보다 더 두껍게
+lighter: 상위(부모) 요소보다 더 얇게
+
+* 글자의 기울기
+normal(기본값)
+font-style: italic(이텔릭체)
+
+* 한 줄의 높이, 행간과 유사
+line-height: 1.4;
+숫자 : 요소의 글꼴 크기의 배수로 지정
+단위 : px, em, rem 등의 단위로 지정
+아래는 잘 사용되지 않는다.
+normal(기본값) : 브라우저의 기본 정의를 사용 
+% 요소의 글꼴 크기의 비율로 지정
+
+* 글꼴 서체 지정
+font-family : 글꼴1, "글꼴 2", ... 글꼴 계열(필수로 작성!);
+띄어쓰기 등 특수문자가 포함된 글꼴은 큰 따옴표로 묶어야 한다.
+글꼴 서체의 지정 개수는 제한이 없다.
+첫번째 작성한 글꼴을 사용할 수 없을 경우 두번째 세번째 시도하다 도저히 사용할 수 없을 때 마지막에 작성한 글꼴이 작성된다.
+serif 바탕체 계열 
+sans-serif 고딕체 계열 (깔끔하게 정리되어 있는!!)
+아래는 잘 사용하지 않는다.
+monospace 고정너비(가로폭이 동등) 글꼴 계열
+cursive 필기체 계열
+fantasy 장식 글꼴 계열
+*/
+h1 {
+  font-size: 24px;
+  font-weight: 700;
+  font-style: italic;
+  font-family: serif;
+}
+
+p {
+  width: 350px;
+  padding: 10px;
+  border: 1px solid;
+  box-sizing: border-box;
+  line-height: 1.4;
+}
+
+/* 
+* Q. 글자 기울기를 지정할 때 사용하는 속성과 값은?
+font-style: italic;
+
+* Q. 글자를 두껍게 지정할 때 사용하는 속성과 값은?
+font-weight: 700;
+
+* Q. 고딕체 계열을 의미하는 속성 값은?
+sans-serif;
+
+* Q. line-height 속성을 사용할 때 권장하는 단위는?
+line-height: 1.4; (배수)
+*/

@@ -1,0 +1,27 @@
+/* 
+* opacity 요소의 투명도 설정
+1(기본값) : 불투명
+0~1 : 0부터 1 사이의 소수점 숫자
+0에 가까울수록 완전 투명, 1에 가까울 수록 불투명
+opacity : 0.07 (7% 불투명도)
+*/
+
+.parent {
+  width: 100px;
+  height: 100px;
+  padding: 30px;
+  background-color: royalblue;
+}
+
+.child {
+  width: 200px;
+  height: 100px;
+  background-color: orange;
+  /* 50%만큼의 불투명도 */
+  opacity: 0.5;
+}
+
+/* 
+* Q. opacity 속성의 기본값은?
+1
+*/

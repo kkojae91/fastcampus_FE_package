@@ -1,0 +1,123 @@
+/* 
+* Flex Container의 화면 출력(보여짐) 특성
+display: ;
+flex 블록 요소와 같이 Flex Container 정의
+inline-flex 인라인 요소와 같이 Flex Container 정의
+
+* 주 축을 설정 (수평 정렬 or 수직 정렬) main-axis
+flex-direction:
+row(기본값) 행 축 (좌 -> 우)
+row-reverse 행 축 (우 -> 좌)
+아래는 잘 사용하지 않는다.
+column 열 축 (위 -> 아래)
+column-reverse 열 축 (아래 -> 위)
+
+* flex items 묶음(줄 바꿈) 여부
+flex-wrap:
+nowrap(기본값) 묶음(줄 바꿈) 없음
+wrap 여러 줄로 묶음
+아래는 잘 사용되지 않는다.
+wrap-reverse wrap의 반대 방향으로 묶음
+
+* 주 축의 정렬 방법
+justify-content: 
+flex-start(기본값) flex items를 시작점으로 정렬
+flex-end flex items를 끝점으로 정렬
+center flex items를 가운데 정렬
+아래는 잘 사용하지 않는다.
+space-between 각 flex item 사이를 균등하게 정렬
+space-around 각 flex item 외부 여백을 균등하게 정렬
+
+* 교차 축의 여러 줄 정렬 방법
+align-content: -> align-items를 더 많이 사용한다.
+align-content는 flex-wrap: wrap일 때 동작한다. (아이템들이 두줄 이상 배치 될 경우 + 여백 공간이 있을 경우!)
+
+stretch(기본값) flex items를 시작점으로 정렬
+flex-start flex items를 시작점으로 정렬
+flex-end flex items를 끝점으로 정렬
+center flex items를 가운데 정렬
+아래는 잘 사용하지 않는다.
+space-between 각 flex item 사이를 균등하게 정렬
+space-around 각 flex item 외부 여백을 균등하게 정렬
+
+* 교차 축의 한 줄 정렬 방법
+align-items:
+stretch(기본값) flex items를 교차 축으로 늘림
+flex-start flex items를 각 줄의 시작점으로 정렬
+flex-end flex items를 각 줄의 끝점으로 정렬
+center flex items를 각 줄의 가운데 정렬
+아래는 잘 사용하지 않는다.
+baseline flex items를 각 줄의 문자 기준선에 정렬
+*/
+
+/* 
+* flex item의 순서 (요소의 순서를 지정한 값의 위치로 바꿔 줄 수 있다.)
+order:
+0(기본값) 순서 없음
+숫자 숫자가 작을 수록 먼저
+
+* flex item의 증가 너비 비율 (부모의 container에 남는 여백이 있을 경우 비율에 맞게 자리를 차지 한다.) item의 width 값 무시
+flex-grow:
+0(기본값) 증가 비율 없음
+숫자 증가 비율
+
+* flex item의 감소 너비 비율
+flex-shrink:
+1(기본값) flex container 너비에 따라 감소 비율 적용
+숫자 감소 비율 (감소 너비를 사용하지 않고 싶을 경우는 0을 할당하면 원래 요소의 크기를 유지한다.)
+
+* flex item의 공간 배분 전 기본 너비
+flex-basis: 0;
+flex-grow를 사용해 1:1:2 비율로 깔끔하게 맞추고 싶을 경우 flex-basis: 0;으롷 설정하면 content의 너비에 관계 없이 1:1:2비율로 flex-grow 된다.
+
+auto(기본값) 요소의 content 너비
+단위 px, em, rem 등 단위로 지정
+*/
+
+.container {
+  width: 500px;
+  height: 300px;
+  /* height: 200px; */
+  background-color: royalblue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* flex-wrap: wrap; */
+}
+
+.container .item {
+  width: 100px;
+  height: 100px;
+  border: 3px dashed red;
+  background-color: orange;
+  flex-grow: 1;
+  flex-basis: 0;
+}
+
+.container .item:nth-child(3) {
+  flex-grow: 2;
+}
+
+/* 
+* Q. display: flex; 가 지정된 요소의 자식요소를 flex ???이라 부른다. ???에 들어갈 용어는?
+items
+
+* Q. flex container의 주 축을 지정하는 속성은?
+flex-direction
+
+* Q. flex-wrap 속성의 기본값은?
+no-wrap
+
+* Q. 교차 축(cross-axis)의 한 줄 정렬을 위한 속성은?
+aligin-items;
+
+* Q. flex item 의 증가 너비를 지정하는 속성은?
+flex-grow;
+
+* Q. flex-grow 속성의 기본값은?
+0
+
+* Q. flex-shrink 속성의 기본값은?
+1
+
+*/

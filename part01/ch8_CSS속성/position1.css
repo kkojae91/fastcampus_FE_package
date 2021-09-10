@@ -1,0 +1,104 @@
+/* 
+* 요소의 위치 지정 기준
+position: relative;
+position과 같이 사용하는 css 속성들!
+top, bottom, left, right, z-index 모두 음수를 사용할 수 있다!
+
+*** position 속성값을 absolute, fixed로 지정한 요소는, 
+    display 속성값이 block으로 변경된다! 참고!!!(좌측과 우측은 동일한 코드)
+    relative은 적용되지 않는다!!
+
+display: block;           position: absolute;
+position: absolute;       top: 30px;
+top: 30px;                z-index: 1;
+z-index: 1;
+
+
+static(기본값) 기준없음
+relative 요소 자신을 기준
+absolute 위치 상 부모 요소를 기준(위치상 부모 요소를 꼭!! 확인!)
+fixed 뷰포트(브라우저)를 기준
+아래는 잘 사용되지 않는다.
+sticky 스크롤 영역 기준
+
+* 요소의 각 방향별 거리 지정
+top, bottom, left, right
+auto(기본값) 브라우저가 계산
+단위 px, em, rem 등 단위로 지정
+
+* 요소 쌓임 순서 (stack order)
+어떤 요소가 사용자와 더 가깝게 있는지(위에 쌓이는지) 결정
+1. 요소에 position 속성의 값이 있는 경우 위에 쌓임.(기본값 static 제외)
+2. 1번 조건이 같은 경우, z-index 속성의 숫자 값이 높을 수록 위에 쌓임.
+3. 1번과 2번 조건까지 같은 경우, html의 다음 구조일 수록 위에 쌓임.(나중에 작성할 수록)
+
+* 요소의 쌓임 정도를 지정
+z-index: 1;
+auto(기본값) 부모 요소와 동일한 쌓임 정도
+숫자 숫자가 높을 수록 위에 쌓임
+어떠한 요소 뒤에 배치하고 싶을 경우 보통 -1을 넣어준다. (-2, -10의 경우는 잘 사용하지 않는다.)
+position: relative;
+z-index: 999;
+최상단으로 올릴 경우 위와 같이 position속성을 주고난 다음, z-index 값을 매우 높은 값을 설정해주는게 좋다.
+너무 높은 값을 사용하지는 말자!! (숫자 1 부터 잘 관리해나가자!)
+*/
+
+body {
+  height: 3000px;
+}
+
+/* .wrap {
+  width: 400px;
+  height: 300px;
+  background-color: tomato;
+  position: relative;
+} */
+
+.container {
+  width: 300px;
+  background-color: royalblue;
+  position: relative;
+}
+
+.container .item {
+  width: 100px;
+  height: 100px;
+  border: 4px dashed red;
+  background-color: orange;
+}
+
+.container .item:nth-child(1) {
+  position: relative;
+  /* width: 100px;
+  height: 100px; */
+}
+
+.container .item:nth-child(2) {
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  /* width: 140px;
+  height: 70px;
+  position: absolute;
+  position: fixed;
+  bottom: 30px;
+  right: 60px; */
+}
+.container .item:nth-child(3) {
+  /* width: 70px;
+  height: 120px; */
+}
+
+/* 
+* Q. position 속성의 기본값은?
+static
+
+* Q. 위치상 부모 요소를 기준으로 배치하는 position 속성의 값은?
+absolute;
+
+* Q. 뷰포트를 기준으로 배치하는 position 속성의 값은?
+fixed;
+
+* Q. display 속성이 block 값으로 바뀌지 않는 position 속성의 값은?
+1) absolute, 2) relative, 3) fixed   => 2) relative
+*/

@@ -1,0 +1,52 @@
+/* 
+* 요소의 전환(시작과 끝) 효과를 지정하는 단축 속성
+transition: 속성명 지속시간(필수 속성) 타이밍함수 대기시간;
+두개 이상속성을 따로 적용할 때는 , 쉼표를 기준으로 작성해준다.
+예 ) transition: width 300ms, background-color 2s;
+
+* 전환 효과를 사용할 속성 이름을 지정
+transition-property
+all(기본값) 모든 속성에 적용
+속성이름 전환 효과를 사용할 속성 이름 명시
+
+* 전환 효과의 지속시간을 지정
+transition-duration
+0s(기본값) 전환 효과 없음
+시간 지속시간(s)을 지정
+
+* 전환 효과의 타이밍(Easing)함수를 지정
+transition-timig-function
+ease(기본값) 느리게-빠르게-느리게
+linear 일정하게
+ease-in 느리게-빠르게
+ease-out 빠르게-느리게
+ease-in-out 느리게-빠르게-느리게
+아래는 잘 사용하지 않는다.
+cubic-bezier(n,n,n,n) 자신만의 값을 정의(0~1 사이의 값을 n자리에 명시)
+steps(n) n번 분할된 애니메이션
+
+* 전환 효과가 몇 초 뒤에 시작할지 대기시간을 지정
+transition-delay
+0s(기본값) 대기시간 없음
+시간 대기시간(s)을 지정
+*/
+
+div {
+  width: 100px;
+  height: 100px;
+  background-color: orange;
+  transition: width 300ms, background-color 2s;
+}
+
+div:hover {
+  width: 300px;
+  background-color: royalblue;
+}
+
+/* 
+* Q. transition-property 속성의 기본값은?
+all
+
+* Q. transition 단축 속성의 필수 포함 속성은?
+transition-duration
+*/

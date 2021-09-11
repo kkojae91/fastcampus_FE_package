@@ -1,0 +1,82 @@
+/* 
+* 요소의 변환 효과
+transform: 변환함수1 변환함수2 변환함수3 ...;
+transform: 원근법 이동 크기 회전 기울임;
+
+* 2D 변환 함수
+단위 px 
+translate(x, y) 이동(x축, y축)
+translateX(x) 이동(x축)
+translateY(y) 이동(y축)
+
+단위 없음
+scale(x, y) 크기 (x축, y축)
+
+단위 deg
+rotate(degree) 회전(각도)
+skewX(x) 기울임(x축)
+skewY(y) 기울임(y축)
+
+* 3D 변환 함수 (명시되지 않는 부분은 잘 사용하지 않는 함수)
+단위 deg
+rotateX(x) 회전(x축)
+rotateY(y) 회전(y축)
+
+단위 px
+perspective(n) 원근법(거리) -> perspective함수는 tranform: 가장 앞에 작성해주어야 합니다.
+
+* 하위 요소를 관찰하는 원근 거리를 지정
+perspective -> 함수X 속성 (원근을 보는 눈을 부모요소에 설정하는 경우 사용!)
+단위 px 등 단위로 지정
+
+* 3D 변환으로 회전된 요소의 뒷면 숨김 여부
+backface-visibility
+visible(기본값) 뒷면 보임
+hidden 뒷면 숨김
+*/
+
+body {
+  padding: 50px;
+}
+
+.container {
+  width: 100px;
+  height: 100px;
+  background-color: royalblue;
+  /* 부모요소에 원근 거리 설정 */
+  perspective: 250px;
+}
+
+.container .item {
+  width: 100px;
+  height: 100px;
+  background-color: orange;
+  font-size: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: rotateY(180deg);
+  /* 뒤집어진 부분부터는 안보이게 */
+  backface-visibility: hidden;
+
+  /* perspective를 어디에서 선언하느냐에 따라 보는 눈의 위치가 달라진다. */
+  /* transform: translateX(100px) perspective(150px) rotateX(45deg); */
+  /* transform: perspective(150px) rotateX(45deg) translateX(100px); */
+}
+
+/* 
+* Q. transform 속성의 2D 회전을 지정하는 변환 함수는?
+rotate()
+
+* Q. 관찰 대상의 부모요소에 원근법을 지정하는 속성은?
+perspective
+
+* Q. skewX 변환 함수에서 값으로 사용하는 단위는?
+deg (각도)
+
+* Q. perspective 함수에서 원근 거리가 적용되는 대상은?
+관찰 대상 자체
+
+* Q. 요소 뒷면을 숨기는 속성과 값은?
+backface-visibility: hidden
+*/
